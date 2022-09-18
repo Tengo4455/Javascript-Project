@@ -230,6 +230,7 @@ header ul li a.active {
 }
 
 .product-container {
+  overflow:hidden;
   padding: 0 10vw;
   display: flex;
   overflow-x: auto;
@@ -241,7 +242,6 @@ header ul li a.active {
 }
 
 .product-card {
-  overflow: hidden;
   flex: 0 0 auto;
   width: 400px;
   height: 500px;
