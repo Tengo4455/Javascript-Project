@@ -50,13 +50,10 @@ formElement.addEventListener("submit", function (y) {
     element.innerHTML = "";
   });
 
-  for (let item in errors) {
+  for (let item in errors)  {
     console.log(item); //username // gender // agree //password2
 
     let TextError = document.getElementById("error_" + item);
-
-    // div id="error_usernameValue"
-    // div id="error_password2" - Passwords do not match'
 
     if (TextError) {
       TextError.textContent = errors[item];
@@ -76,20 +73,14 @@ function validationEmail() {
 
   if (email.match(emailStructure)) {
     form.classList.add("valid");
-    errorText.innerHTML = "Your Email is Valid";
-    errorText.style.color = "green";
   } else {
     form.classList.remove("valid");
     form.classList.add("invalid");
-    errorText.innerHTML = "Your Email is Invalid";
-    errorText.style.color = "red";
   }
 
   if (email == "") {
     form.classList.remove("valid");
     form.classList.add("invalid");
-    errorText.innerHTML = "Enter Your Email";
-    errorText.style.color = "blue";
   }
 }
 
